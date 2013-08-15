@@ -28,6 +28,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.labelMinhaAvaliacao.hidden = YES;
+    self.SliderMinhaAvaliacao.hidden = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -40,5 +42,17 @@
     EMMapaController *ponteiro = [[EMMapaController  alloc] init];
     [self.navigationController pushViewController:ponteiro animated:YES];
     [ponteiro release];
+}
+
+- (IBAction)btnAvaliar:(id)sender {
+    self.labelMinhaAvaliacao.hidden = NO;
+    self.SliderMinhaAvaliacao.hidden = NO;
+}
+
+
+- (void)dealloc {
+    [_labelMinhaAvaliacao release];
+    [_SliderMinhaAvaliacao release];
+    [super dealloc];
 }
 @end

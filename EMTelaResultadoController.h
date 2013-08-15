@@ -10,5 +10,8 @@
 
 @interface EMTelaResultadoController : UIViewController
 - (IBAction)BtnMapa:(id)sender;
+- (IBAction)btnAvaliar:(id)sender;
+@property (retain, nonatomic) IBOutlet UILabel *labelMinhaAvaliacao;
+@property (retain, nonatomic) IBOutlet UISlider *SliderMinhaAvaliacao;
 
 @end
